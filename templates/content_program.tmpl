@@ -1,0 +1,854 @@
+<div id="program" class="content-container">
+  <div class="jumbotron">
+    <h1>
+      Program<br />
+      <small>North East Database Day 2026 </small><br />
+      <small>Friday January 16th, 2026</small><br />
+      <small><a href="https://www.umb.edu/campus-center/" target="_blank">Campus Center Ballroom</a>
+        @ UMass Boston</small>
+    </h1>
+  </div>
+  <h2>Special thanks to this year’s sponsors:</h2>
+  <p style="text-align: center;">
+    <a href="https://www.cs.umb.edu/" target="_blank"><img src="images/logos/umb_logo.jpg"
+        style="height: 100%; max-height: 95px; width: auto;" /></a> &nbsp; &nbsp;
+    <a href="https://research.google.com/" target="_blank"><img src="images/logos/google_new.png"
+        style="height: 100%; max-height: 95px; width: auto;" /></a> &nbsp; &nbsp;
+    <a href="https://www.microsoft.com/en-us/research/" target="_blank"><img src="images/logos/MSFT.png"
+        style="height: 100%; max-height: 95px; width: auto;" /></a> &nbsp; &nbsp;
+    <a href="https://www.intel.com/" target="_blank"><img src="images/logos/intel.png"
+        style="height: 100%; max-height: 95px; width: auto;" /></a> &nbsp; &nbsp;
+    <a href="https://www.oracle.com/" target="_blank"><img src="images/logos/Oracle.png"
+        style="height: 100%; max-height: 95px; width: auto;" /></a> &nbsp; &nbsp;
+  </p>
+
+
+  <p style="text-align: center;">
+    <a href="javascript: toggleVisibility ('showall')">Show</a>/<a href="javascript: toggleVisibility ('hideall')">Hide
+      all abstracts</a>
+  </p>
+
+
+  <table class="table table-bordered table-hover table-condensed programTable">
+    <tbody>
+      <tr>
+        <th width="17%">Time</th>
+        <th width="83%">Event</th>
+      </tr>
+      <tr>
+        <td>8:00 - 8:45</td>
+        <td><strong>Registration</strong></td>
+      </tr>
+      <tr>
+        <td>8:45 - 9:00</td>
+        <td><strong>Welcome and Acknowledgments</td>
+      </tr>
+
+      <tr class="success">
+        <td colspan="2" align="center"><strong>Session 1: Core Database Systems and Storage Engine </strong> <br> Chair:
+          Utku Sirin (Harvard University)</td>
+      </tr>
+
+      <tr>
+        <td>9:00 - 9:30</td>
+        <td><strong>Keynote 1: </strong>
+          Nesime Tatbul (Intel/MIT) <br> <i>Scalable Data Management and Analytics for Observability Applications</i>
+          <br />
+          <a href="javascript: toggleVisibility ('#keynote1A')">Click to toggle abstract and bio.</a>
+          <div id="keynote1A" class="abstract" style="display: none;">
+            <h3>Abstract</h3>
+            <p>
+              Observability is the ability to understand and control the behavior of large-scale software systems using
+              run-time telemetry. Managing observability data involves handling massive volumes of heterogeneous time
+              series while operating under tight resource constraints. Troubleshooting the observed system requires
+              efficient exploration of this data through interactive queries with time-oriented operations. Advances in
+              AI have enabled more sophisticated data analysis techniques such as anomaly detection and explanation.
+              This talk presents examples from our recent research in data management for modern observability in
+              response to these challenges and opportunities.
+
+            </p>
+            <h3>Bio</h3>
+            <p>
+              <b>Nesime Tatbul </b> is a Senior Staff Research Scientist at Intel. For the last 10+ years, she has been
+              based at MIT, overseeing Intel's university research programs on data systems and artificial intelligence.
+              Previously, she received a Ph.D. from Brown University and held a faculty position at ETH Zurich. Her
+              research contributions in data stream systems, time series analytics, and learned data management have
+              been widely cited and recognized by awards. Nesime is an ACM Distinguished Member, an IEEE Senior Member,
+              and a Trustee Emeritus of the VLDB Endowment.
+
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>9:30 - 9:45</td>
+        <td>
+
+          <i>DiskJoin: Large-scale Vector Similarity Join with SSD</i> <a
+            href="download/slides/talk_12.pdf">[Slides]</a> <a
+            href="download/posters/poster_12.pdf">[Poster]</a><br />
+          Yanqi Chen (University of Massachusetts Amherst)*; Xiao Yan (Institute for Math & AI, Wuhan, Wuhan
+          University); Alexandra Meliou (University of Massachusetts Amherst); Eric Lo (The Chinese University of Hong
+          Kong) <br />
+          <a href="javascript: toggleVisibility ('#po12')">Click to Toggle Abstract </a>
+          <div id="po12" class="abstract" style="display: none;">
+            <p>
+              Vector similarity join is a fundamental operation in modern data management and machine learning
+              pipelines, enabling applications such as large-scale deduplication, outlier detection, and dataset
+              curation. Prior work has explored distributed computation methods to scale similarity join to large data
+              volumes but these methods require a cluster deployment, and efficiency suffers from expensive
+              inter-machine communication. On the other hand, disk-based solutions are more cost-effective by using a
+              single machine and storing the large dataset on high-performance external storage, such as NVMe SSDs, but
+              in these methods the disk I/O time is a serious bottleneck. <br />In this talk, we present DiskJoin, the
+              first disk-based similarity join algorithm that can process billion-scale vector datasets efficiently on a
+              single machine. DiskJoin improves disk I/O by tailoring the data access patterns to avoid repetitive
+              accesses and read amplification. It also uses main memory as a dynamic cache and carefully manages cache
+              eviction to improve cache hit rate and reduce disk retrieval time. For further acceleration, we adopt a
+              probabilistic pruning technique that can effectively prune a large number of vector pairs from
+              computation. Our evaluation on real-world, large-scale datasets shows that DiskJoin significantly
+              outperforms alternatives, achieving speedups from 50x to 1000x.
+          </div>
+        </td>
+
+
+      </tr>
+
+      <tr>
+        <td>9:45 - 10:00</td>
+        <td>
+          <i>TurtleKV: A Dynamically Tunable Key/Value Store</i> <a
+            href="download/slides/talk_46.pdf">[Slides]</a> <a
+            href="download/posters/poster_46.pdf">[Poster]</a><br />
+          Anthony Astolfi (The MathWorks)*;
+          Vidya Silai (The MathWorks);
+          Darby Huye (Tufts University);
+          Lan Liu (Tufts University);
+          Raja Sambasivan (Tufts University);
+          Johes Bater (Tufts University)<br />
+          <a href="javascript: toggleVisibility ('#po46')">Click to Toggle Abstract</a>
+          <br />
+          <div id="po46" class="abstract" style="display: none;">
+            <p>
+              Key/Value Storage Engines, a crucial building block for modern databases and applications, are constrained
+              by fundamental resource cost trade-offs that prevent simultaneous optimal tuning for all workloads. The
+              basic, two-way trade-offs from which this constraint emerges are not equally advantageous as tuning knobs,
+              however: altering the stored structure of data to target a tuning point (i.e., trading reads against
+              writes) makes it expensive <br />to change the tuning objective later. Memory-based trade-offs
+              (read-memory, write-memory) offer lower retuning costs, but write-vs-memory, or WM tuning is poorly
+              supported in current system designs. We present TurtleKV, a new key/value storage engine utilizing a novel
+              external memory dictionary, the TurtleTree, as an alternative. TurtleKV, though its selection of primary
+              data structure and multi-core optimized system design, enables dynamic, runtime tuning of read-memory and
+              write-memory trade-offs to target optimal performance for changing workloads. In the Yahoo Cloud Serving
+              Benchmark (YCSB) TurtleKV is able to match or exceed the performance of state-of-the-art storage engines
+              SplinterDB, RocksDB, and WiredTiger.
+          </div>
+        </td>
+
+      </tr>
+      </td>
+      </tr>
+
+
+
+      <tr>
+        <td>10:00 - 10:15</td>
+        <td>
+
+
+          <i>Meeting Latency SLOs on Cloud Data Warehouses</i> <a
+            href="download/slides/talk_20.pdf">[Slides]</a><br />
+          Markos Markakis (Massachusetts
+          Institute of Technology)*; 
+          Ziniu Wu (Massachusetts Institute of Technology);
+          Tim Kraska (Massachusetts Institute of Technology)
+          <br />
+          <a href="javascript: toggleVisibility ('#po20')">Click to Toggle Abstract</a>
+          <br />
+          <div id="po20" class="abstract" style="display: none;">
+            <p>
+              As the cloud-based data warehousing market matures, low technical configuration requirements are emerging
+              as an important selling point. Where customers once had to carefully provision VMs, today's "serverless"
+              model abstracts away most of the hardware details. In the next phase of this evolution, vendors are
+              examining cost/performance constraints as configuration inputs, moving away from explicit mentions of
+              hardware at all. In one formulation, they aim to deliver the best performance under some dollar budget. In
+              the formulation we focus on, one aims for acceptable latency as cheaply as possible, where "acceptable" is
+              defined as queries meeting their latency Service-Level Objectives (SLOs). In this work, we present a
+              framework for assembling and operating multi-compute-instance cloud-based data warehouses under a latency
+              SLO. We discuss the opportunities afforded by recent ML advances in the field, and describe promising
+              paths forward and their early results. This is ongoing work.
+          </div>
+        </td>
+      </tr>
+
+      </td>
+      </tr>
+
+      <tr>
+        <td>10:15 - 10:30</td>
+        <td>
+          <i>Bringing Vector Search to OLTP</i> <a
+            href="download/slides/talk_33.pdf">[Slides]</a> <a
+            href="download/posters/poster_33.pdf">[Poster]</a><br />
+          Shu Zhou (Google)* <br />
+          <a href="javascript: toggleVisibility ('#po33')">Click to Toggle Abstract</a> Shu Zhou (Google)*
+          <br />
+          <div id="po33" class="abstract" style="display: none;">
+            <p>
+              This talk discusses the design and implementation of a fully-transactional and highly-performant
+              Approximate Nearest Neighbor (ANN) vector search feature in Google Cloud SQL for MySQL. We address the
+              fundamental challenges of integrating an in-memory ANN library, Scalable Nearest Neighbors (ScaNN), into
+              an ACID-compliant, multi-version concurrency control (MVCC) environment, delivering a solution that is
+              both powerful and seamlessly integrated for MySQL users.
+          </div>
+        </td>
+
+      </tr>
+      </td>
+      </tr>
+
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>10:30 - 11:00</td>
+        <td><strong>Coffee Break</strong></td>
+      </tr>
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+
+
+
+      <tr class="success">
+        <td colspan="2" align="center"><strong>Session 2: Indexes, Filters, and Adaptive Data Structures</strong> <br>
+          Chair: Gerardo Vitagliano (MIT) (MIT) </td>
+      </tr>
+
+      <tr>
+        <td>11:00 - 11:30</td>
+        <td><strong>Keynote 2: </strong>
+          Ippokratis Pandis (Databricks) <br> <i>Evolving Databases for the Cloud and AI era.</i>
+          <br />
+          <a href="javascript: toggleVisibility ('#keynote2A')">Click to toggle abstract and bio.</a>
+          <div id="keynote2A" class="abstract" style="display: none;">
+            <h3>Abstract</h3>
+            <p>
+              In this presentation, we are going to talk about Lakebase, a vision for the next generation of cloud-based
+              agent-enabled OLTP systems. After the dramatic transformation of analytics (OLAP) platforms over the past
+              one to two decades—with innovations such as columnar storage, vectorized execution, streaming, and the
+              Lakehouse architecture—we argue that databases (OLTP) are now at an inflection point. We will explore how
+              cloud-native infrastructure, new workload requirements, and the rise of AI are reshaping what
+              transactional systems must deliver. Lakebase extends the key principles that made the Lakehouse
+              successful—decoupled compute and storage, open formats, and cross-engine interoperability—to OLTP
+              workloads, enabling a modern, scalable, and open architecture designed for the cloud and AI era.
+            </p>
+            <h3>Bio</h3>
+            <p>
+              <b>Ippokratis Pandis </b> is a Distinguished Engineer at Databricks with a background in database systems.
+              Ippokratis spent over a decade helping shape AWS Analytics and Amazon Redshift in particular as
+              VP/Distinguished Engineer, and before that he worked on Cloudera Impala and IBM DB2 BLU. He holds a Ph.D.
+              from Carnegie Mellon University on multicore transaction processing and has contributed to both industry
+              and academic communities around large-scale data management. He is currently the President of HPTS and
+              served as General Chair of SIGMOD 2023.
+          </div>
+        </td>
+      </tr>
+      </td>
+      </tr>
+
+
+      <tr>
+        <td>11:30 - 11:45</td>
+        <td>
+          <i>Space Efficient Mapping Structures for Learned Indexes</i> <a
+            href="download/slides/talk_15.pdf">[Slides]</a>  <a
+            href="download/posters/poster_15.pdf">[Poster]</a>
+          <br />
+          Anwesha Saha (Boston University)*;
+          Aneesh Raman (Boston University);
+          Ryan Marcus (University of Pennsylvania);
+          Manos Athanassoulis (Boston University)<br />
+          <a href="javascript: toggleVisibility ('#po15')"> Click to Toggle Abstract</a>
+          <div id="po15" class="abstract" style="display: none;">
+            <p>
+              Learned indexes are strong competitors to classical indexes like B+Trees due to efficient query
+              performance and low space utilization. They operate by replacing the internal nodes of the index with a
+              hierarchy of machine learning models that capture the data distribution. However, to achieve high space
+              savings in practical indexing structures, learned indexes require a sorted version of the underlying data.
+              We therefore explore lightweight mapping structures that can accurately translate the sorted positions
+              predicted by the learned index to their actual physical locations in the base data. We focus on structures
+              that implement this sorted-to-physical mapping by storing the permutation and balancing the space–time
+              tradeoffs involved.<br />Our initial work explored wavelet tree-based representations of this permutation
+              to reduce memory footprint, but the traditional structure incurred high cache misses due to binary splits
+              at each level. We extended this to a multiway variant, but this added complexity and required higher
+              memory due to metadata needed for efficient access. Because of these tradeoffs, this structure could not
+              surpass state-of-the-art permutation storage.<br /><br />To address these challenges, we introduce a new
+              data structure, Constellation Maps, which models the permutation in 2-D space. A set of points is
+              represented as (i, p[i]) implying that the i-th sorted element exists at position p[i] in the original
+              data. We encode these points using a set of lines (slope and intercept) along with a small error (a few
+              bits). When the data exhibits structure, very few lines can map all points (e.g., a sorted group requires
+              a single line through the origin). Moreover, if most points map to a few lines, these hot lines can be
+              efficiently cached, leading to extremely fast access.<br /><br />However, finding the best set of lines is
+              computationally difficult. Linear solvers exist but do not scale to large datasets, and different
+              line-drawing algorithms model specific distributions best. We currently explore multiple methods: RANSAC
+              (a consensus-based greedy algorithm), recursively fitted linear regression, a greedy line-sampling
+              approach, and a grid-voting algorithm using the Hough transform. Across these methods, selecting sampling
+              strategies, budgets, stopping criteria, and loss functions is nontrivial. While the problem resembles set
+              cover, the interaction between error bounds, coverage skew, and access efficiency makes it substantially
+              harder and requires adaptive, structure-aware builders.<br /><br />Ultimately, we aim to make learned
+              indexes practically deployable by making theoretically efficient indexing structures feasible through
+              structure-aware designs that combine data structures with learning and algorithmic techniques while
+              preserving learned indexes’ space–time advantages in real systems.
+          </div>
+        </td>
+      </tr>
+      </td>
+      </tr>
+
+      <tr>
+        <td>11:45 - 12:00</td>
+        <td>
+          <i>Augmenting Adaptive Filters with Ski Rental Policies</i> <a
+            href="download/slides/talk_16.pdf">[Slides]</a> <a
+            href="download/posters/poster_16.pdf">[Poster]</a><br />
+          Yuvaraj Chesetti (Northeastern University)*;
+          Prashant Pandey (Northeastern University)<br />
+          <a href="javascript: toggleVisibility ('#po16')">Click to Toggle Abstract</a>
+          <div id="po16" class="abstract" style="display: none;">
+            <p>
+              The talk will present ongoing researching work on applying online decision policies to adaptive filters.
+              Adaptive filters are filters that correct false positives dynamically, solving traditional filters' key
+              weakness: static representations that yield near-100\% error rates on skewed workloads. <br /> <br />By
+              updating their representation upon detecting false positives, adaptive filters bound error rates
+              regardless of query distribution. <br />However, each adaptation requires disk I/O, creating overhead that
+              must be amortized across repeated false positives.<br />Consequently, while adaptive filters deliver
+              robust performance on highly skewed or adversarial workloads, they experience performance degradation on
+              uniform random workloads where adaptivity becomes an unnecessary overhead.<br /><br />In the talk, we will
+              present ongoing research to address this fundamental limitation in adaptive filters by establishing a
+              connection to the online ski rental problem~\cite{KarlinMMO94}---a classic online decision problem where
+              one must repeatedly choose between renting or buying skis without knowing future usage. <br />We
+              demonstrate that adapting a false positive is equivalent to ``buying", while accepting the false positive
+              without adaptation corresponds to ``renting''<br />By analyzing this model, we determine when to adapt a
+              false positive for consistent performance. <br /><br />Based on this model, we will present details about
+              our proposed solutions: the SkiQF, an online adaptive filter that provides robust false positive rate
+              guarantees through adaptivity while maintaining consistent, high performance across varying query
+              distributions.<br />We also introduce the SampledSkiQF, a heuristic variant that achieves even stronger
+              performance by trading off slight robustness.<br />The SampledSkiQF employs a sampling phase to determine
+              an optimal adaptation strategy, deciding between adapting immediately like adaptive filters, or never
+              adapting like traditional filters.<br /><br />
+          </div>
+        </td>
+      </tr>
+      </td>
+      </tr>
+
+
+      <tr>
+        <td>12:00 - 12:15</td>
+        <td>
+          <i>Diva: Dynamic Range Filter for Var-Length Keys and Queries</i> <a
+            href="download/slides/talk_39.pdf">[Slides]</a><br />
+          Navid Eslami (University of Toronto );
+          Ioana Bercea (KTH Royal Institute of Technology);
+          Niv Dayan (University of Toronto)*
+          <br />
+          <a href="javascript: toggleVisibility ('#po39')">Click to Toggle Abstract</a>
+          <div id="po39" class="abstract" style="display: none;">
+            <p>
+              We propose to present our VLDB 2025 paper, ``Diva: Dynamic Range Filter for Variable-Length Keys and
+              Queries.'' The paper received the 2025 VLDB Best Paper Award and was recently invited for the 2026 SIGMOD
+              Record Research Highlights. The talk will be given by Niv Dayan, who was a postdoctoral researcher at
+              Harvard University from 2015 to 2019, and is therefore an alumnus of the Northeastern Database Community.
+              Niv is currently an assistant professor at the University of Toronto. <br /><br />Range filters are
+              compact probabilistic data structures that answer approximate range emptiness queries. They are used in
+              many domains, e.g., in key-value stores, to quickly rule out the existence of keys in a given query range
+              and avoid having to search for them in storage. However, all existing range filters exhibit at least one
+              of the following shortcomings: (1)~ they do not provide robust false positive rate and performance
+              guarantees, (2)~they do not support variable-length keys and query ranges, and (3)~they do not allow
+              dynamic operations such as insertions, deletions, or expansions.<br /><br />We introduce Diva, the first
+              range filter to address all the above challenges simultaneously. Diva learns the dataset's distribution by
+              sampling keys and storing them in a cache-efficient trie. It compresses the keys in-between samples by
+              removing their longest common prefix and truncating their suffixes while leaving enough bits in the middle
+              (i.e., an infix) to allow differentiating between the keys in the sorted order. It stores infixes in
+              constant time dynamic data blocks, which it splits to handle insertions and expansions. It processes a
+              range query by traversing the trie and checking for the inclusion of infixes in the target query range. We
+              show, theoretically and empirically, that Diva achieves a false positive rate on par with the state of the
+              art on real-world datasets while supporting dynamicity and variable-length queries and keys.
+          </div>
+        </td>
+      </tr>
+      </td>
+      </tr>
+
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>12:15 - 1:15</td>
+        <td><strong>Lunch Break</strong></td>
+      </tr>
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+
+
+
+
+      <tr class="success">
+        <td colspan="2" align="center"><strong>Session 3: Potpourri (From Data Security to Human-Centric Data
+            Understanding)</strong> <br>
+          Chair: Markos Markakis (MIT) </td>
+      </tr>
+
+      <tr>
+        <td>1:15 - 1:30</td>
+        <td>
+          <i>ORQ: Complex Analytics on Private Data with Strong Security Guarantees</i> <a
+            href="download/slides/talk_17.pdf">[Slides]</a> <a
+            href="download/posters/poster_17.pdf">[Poster]</a><br />
+          Eli Baum (Boston University)*;
+          Sam Buxbaum (Boston University);
+          Nitin Mathai (UT Austin);
+          Muhammad Faisal (Boston University)l;
+          Vasiliki Kalavri (Boston University);
+          John Liagouris (Boston University);
+          Mayank Varia (Boston University)* <br />
+          <a href="javascript: toggleVisibility ('#po17')">Click to Toggle Abstract</a>
+          <div id="po17" class="abstract" style="display: none;">
+            <p>
+              In this talk, I will present ORQ (SOSP'25), a system that enables collaborative analysis of large private
+              datasets using secure multi-party computation. Collaborative analytics are important in a wide array of
+              domains, including socioeconomic research, healthcare, or privacy-preserving telemetry, where users may
+              wish to share their data for analysis while preventing misuse. ORQ protects data against semi-honest or
+              malicious (Byzantine) parties and can efficiently evaluate relational queries with multi-way joins and
+              aggregations that have been considered notoriously expensive under MPC.<br /><br />Secure computation
+              requires obliviousness: control flow and memory access patterns must be independent of the actual data,
+              and can only depend on the input size. One consequence is that such computations must always preserve
+              worst-case output sizes to avoid leakage. In the case of secure joins, this worst-case size is the
+              Cartesian product — quadratic in the number of input records, and exponential in the number of joins.
+              Prior research has sought to avoid this quadratic blowup with a series of compromises: peer-to-peer
+              analytics, which requires users to process plaintext data; leakage or user-specified upper bounds; or by
+              targeting only individual join operators, rather than full queries. ORQ eliminates the quadratic cost of
+              secure joins by leveraging the fact that, in practice, the structure of many real queries allows us to
+              join records and apply the aggregations in a single, combined step, while keeping the result size bounded.
+              This process can be efficiently implemented while introducing zero leakage.<br /><br />Along the way, we
+              contribute new implementations of parallelized oblivious shuffle, quicksort, and radixsort. ORQ can take
+              full advantage of compute and network resources through the use of a custom communicator and data-parallel
+              multithreaded runtime. Our framework is extensible and efficient, allowing cryptographic protocol
+              developers and data analysts alike to test their ideas and build new functionality for any problem
+              domain.<br /><br />We evaluate ORQ in LAN and WAN deployments on a diverse set of workloads, including
+              complex queries with multiple joins and custom aggregations. When compared to state-of-the-art solutions,
+              ORQ significantly reduces execution times and can process one order of magnitude larger datasets. For our
+              most challenging workload, the full TPC-H benchmark, we report results *entirely* under MPC at Scale
+              Factor 10 — a multi-gigabyte input size that had not yet been achieved, even with information leakage or
+              the use of trusted third parties.
+          </div>
+        </td>
+      </tr>
+      </td>
+      </tr>
+
+
+      <tr>
+        <td>1:30 - 1:45</td>
+        <td>
+          <i>Scalable Image AI via Self-Designing Storage</i><br />
+          Utku Sirin (Harvard University)*<br />
+          <a href="javascript: toggleVisibility ('#po52')">Click to Toggle Abstract</a>
+
+          <br />
+          <div id="po52" class="abstract" style="display: none;">
+            <p>
+              Image AI has the potential to improve every aspect of human life. Image AI, however, is very expensive. We
+              identify that the root cause of the problem is a long-overlooked and largely unexplored dimension:
+              storage. Most images today are stored as JPEG files. JPEG is designed for digital photography. It
+              maximally compresses images with minimal loss in visual quality. We observe that JPEG is a fixed design.
+              AI problems, however, are diverse; every problem is unique in terms of how data should be stored and
+              processed. Using a fixed design, such as JPEG, for all problems results in excessive data movements and
+              costly image AI systems. This paper presents Image Calculator, a self-designing storage system that finds
+              the optimal storage for a given image AI task. The Image Calculator achieves this by identifying design
+              primitives for image storage and creating a design space comprising thousands of storage formats based on
+              these design primitives, each capable of storing and representing data differently, with varying accuracy,
+              inference and training time, as well as space consumption trade-offs. It efficiently searches within this
+              design space by building performance models and using locality among its storage formats. It exploits the
+              inherent frequency structure in image data to efficiently serve inference and training requests. We
+              evaluate the Image Calculator across a diverse set of datasets, tasks, models, and hardware. We show that
+              Image Calculator can generate storage formats that reduce end-to-end inference and training times by up to
+              14.2x and consumed space by up to 8.2x with little or no loss in accuracy, compared to state-of-the-art
+              image storage formats.
+          </div>
+        </td>
+      </tr>
+      </td>
+      </tr>
+
+      <tr>
+        <td>1:45 - 2:00</td>
+        <td>
+          <i>Database Research needs an Abstract Relational Query Language</i>
+          Wolfgang Gatterbauer (Northeastern University)* 
+          <a
+            href="download/slides/talk_69.pdf">[Slides]</a> <a
+            href="https://www.youtube.com/watch?v=BZYlQYEtLXw&list=PL_72ERGKF6DTFRMjl0GcvKtbVSNj2krNB [youtube.com]">[Youtube]</a><br />
+          <a href="javascript: toggleVisibility ('#po69')">Click to Toggle Abstract</a> 
+          <br />
+          <div id="po69" class="abstract" style="display: none;">
+            <p>
+              Practitioners increasingly avoid writing SQL from scratch. Instead, they read, interpret and edit queries
+              drafted by AI assistants. As a result, queries are no longer a fixed, non-negotiable specification, and
+              more a malleable medium for surfacing ambiguities and interactively converging on an intended meaning. We
+              argue that rethinking future interfaces for this human-AI generate-and-review loop calls for an Abstract
+              Relational Query Language (ARQL): a semantics-first metalanguage that cleanly separates intent from
+              surface syntax and makes relational patterns comparable across languages.
+              <br />
+              <br />
+              We present Abstract Relational Calculus (ARC), a generalization of tuple relational calculus (TRC) that
+              decomposes queries into a (1) relational core, (2) audience-specific modalities (humans vs. machines), and
+              (3) explicit conventions. ARC serves as a shared semantic reference (a "Rosetta Stone") for relational
+              language and interface design, including NL2SQL.
+              <br />
+              <br />
+              This separation lets us revisit two long-standing claims in relational language design: (1) that
+              pipeline-style languages are inherently more intuitive than SQL's (or TRC's) "inside-out" dataflow, and
+              (2) that pipelines are inherently more reusable. Using our vocabulary and ARC as reference language, we
+              show that cognitive load (and thus perceived intuitiveness when reading queries) is primarily a matter of
+              modality rather than "inside-out" vs. linear flow, and that we can achieve modularity and composition even
+              for "inside-out" by using abstract relations.
+              <br />
+              <br />
+              RELEVANT PAPERS
+              <br />
+              * Database Research needs an Abstract Relational Query Language, CIDR 2026.
+              <a href="https://www.vldb.org/cidrdb/papers/2026/p27-gatterbauer.pdf">[Link]</a> <br />
+              * A Principled Solution to the Disjunction Problem of Diagrammatic Query Representations, SIGMOD 2026 (to
+              appear)
+              <a href="https://arxiv.org/pdf/2412.08583">[Link]</a> <br />
+              * Relational Diagrams and the Pattern Expressiveness of Relational Languages, SIGMOD record 2025.
+              <a href="https://sigmodrecord.org/?smd_process_download=1&download_id=14010">[Link]</a> <br />
+              <br />
+              PROJECT PAGE
+              <br />
+              <a href="https://relationaldiagrams.com/">relationaldiagrams.com</a>
+          </div>
+
+        </td>
+      </tr>
+      </td>
+      </tr>
+
+      <tr>
+        <td>2:00 - 2:15</td>
+        <td>
+          <i>Understanding Human Judgment in Table Unionability</i> <a
+            href="download/slides/talk_36.pdf">[Slides]</a>  <a
+            href="download/posters/poster_36.pdf">[Poster]</a><br />
+          Nina Klimenkova (Worcester Polytechnic Institute)*;
+          Roee Shraga (Worcester Polytechnic Institute);
+          Sreeram Marimuthu (Worcester Polytechnic Institute)
+          <br />
+          <a href="javascript: toggleVisibility ('#po36')">Click to Toggle Abstract</a>
+          <div id="po36" class="abstract" style="display: none;">
+            <p>
+              In this talk, Nina Klimenkova, one of the first authors, will present a study that examines how humans
+              reason about table unionability through a controlled experimental survey and behavioral analysis. The
+              findings are used to develop a machine learning framework that improves raw human judgments and to study
+              how large language models (LLMs) behave under different levels of human context. This talk is based on the
+              ACM SIGMOD 2025 HILDA workshop paper Humans, Machine Learning, and Language Models in Union: A Cognitive
+              Study on Table Unionability.
+          </div>
+        </td>
+      </tr>
+      </td>
+      </tr>
+
+
+
+
+      <tr>
+        <td>2:15 - 2:30</td>
+        <td>
+
+
+          <i>Architecting Distributed Systems with DynamoDB: A Production Perspective</i><br />
+          Tejas Pravinbhai Patel (Amazon)*<br />
+          <a href="javascript: toggleVisibility ('#po7')">Click to Toggle Abstract</a>
+          <div id="po7" class="abstract" style="display: none;">
+            <p>
+              As cloud-native applications scale globally, architectural decisions around distributed NoSQL databases
+              become critical to system reliability, performance, and cost efficiency.
+              This talk presents theoretical foundations and practical engineering insights from building
+              production-scale distributed systems at Amazon, focusing on DynamoDB as a cornerstone of modern cloud
+              architecture. We explore how DynamoDB's design principles align with classical distributed database
+              concepts while addressing real-world implementation challenges.<br />DynamoDB provides single-digit
+              millisecond performance at virtually any scale, yet achieving optimal performance, cost efficiency, and
+              global availability requires deep understanding of distributed systems theory and practical architectural
+              nuances. This talk bridges this gap through research-backed approaches validated in production deployments
+              serving millions of requests per second.<br />DISTRIBUTED SYSTEMS ARCHITECTURE<br />We examine DynamoDB's
+              architecture through distributed systems principles. Hash-based partitioning strategies demonstrate how
+              partition key design affects throughput—improper selection creates hot partitions reducing effective
+              throughput by up to 80%, while optimized designs achieve near-linear scalability. We analyze consistency
+              models through the CAP theorem lens, presenting latency measurements showing eventual consistency reads
+              exhibit 2-3x lower latency in cross-region scenarios while maintaining sub-second convergence for 99.9% of
+              operations. Fault injection experiments demonstrate replication resilience across Availability Zones and
+              Regions.<br />MULTI-REGION ARCHITECTURES<br />Multi-region architectures require sophisticated strategies.
+              We present Global Tables architecture with conflict resolution using last-writer-wins and vector clocks,
+              demonstrating cross-region replication characteristics (p50: 0.8s, p99: 2.1s). Active-active versus
+              active-passive deployment patterns are compared, with case studies showing production systems handling
+              region-wide outages with RPO under 1 second and RTO under 30 seconds. Geographic data routing with Route
+              53 latency-based routing demonstrates 45-60% latency improvements for distributed user
+              bases.<br />INTEGRATION PATTERNS<br />Integration patterns address real-world system complexity. DynamoDB
+              Streams with Lambda enable event-driven architectures processing 100K+ events/second. DAX integration
+              provides 10x latency reduction for read-heavy workloads. We present microservices patterns including
+              distributed tracing with X-Ray, transactional boundaries using DynamoDB Transactions, and polyglot
+              persistence strategies combining DynamoDB with RDS and S3 based on access patterns and consistency
+              requirements.
+          </div>
+        </td>
+
+      </tr>
+      </td>
+      </tr>
+
+
+
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>2:30 - 3:00</td>
+        <td><strong>Coffee Break</strong></td>
+      </tr>
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+
+
+      <tr class="success">
+        <td colspan="2" align="center"><strong>Session 4: AI for Systems & Systems for AI </strong> <br> Chair: Teona
+          Bagashvili (Boston University)</td>
+      </tr>
+
+      <tr>
+        <td>3:00 - 3:30</td>
+        <td><strong>Keynote 3: </strong>
+          Ryan Marcus (University of Pennsylvania) <br> <i>Next Steps for Learned Query Optimization</i> <a
+            href="download/slides/keynote3.pdf">[Slides]</a>
+          <br />
+          <a href="javascript: toggleVisibility ('#keynote3A')">Click to toggle abstract and bio.</a>
+          <div id="keynote3A" class="abstract" style="display: none;">
+            <h3>Abstract</h3>
+            <p>
+              Since 2018, the database community has found a myriad of ways to use reinforcement learning (RL) for query
+              planning. While scientifically interesting and an important step forward, these techniques (including my
+              own) failed to see much adoption in industry due to their sample inefficiency, unpredictable behavior, and
+              added critical path complexity. Our lab's recent work has circumvented this problem in two ways. First, we
+              show that one can pull RL "up," using RL to optimize an entire query workload offline, and then using only
+              verified query plans at runtime. Second, we show that one can push RL "down" into the execution engine
+              itself, where each morsel becomes a sample and incorrect decisions are "learned away" during the execution
+              of a single query. We believe both of these directions are promising, and show some preliminary evidence
+              from industry for the first proposal.
+            </p>
+            <h3>Bio</h3>
+            <p>
+              <b>Ryan Marcus </b> is an assistant professor at the University of Pennsylvania, where he focuses on using
+              machine learning to build the next generation of data management tools that automatically adapt to new
+              hardware and user workloads, invent novel processing strategies, and understand user intention. Prior to
+              Penn, Ryan was a postdoc at MIT (supervised by Tim Kraska), and received his PhD from Brandeis University
+              (advised by Olga Papaemmanouil). Ryan has also held research positions at Amazon, Intel Labs, and the Los
+              Alamos National Laboratory.
+          </div>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td>3:30 - 3:45</td>
+        <td>
+          <i>Evergreen: Efficient Claim Verification for Semantic Aggregates</i> <a
+            href="download/slides/talk_28.pdf">[Slides]</a>
+          <br />
+          Alexander Lee (Brown University and Snowflake Inc.)*;
+          Benjamin Han (Snowflake Inc.);
+          Shayak Sen (Snowflake Inc.);
+          Sam Yeom (Snowflake Inc.);
+          Ugur Cetintemel (Brown University and Snowflake Inc.);
+          Anupam Datta (Snowflake Inc.) <br />
+          <a href="javascript: toggleVisibility ('#po28')">Click to Toggle Abstract</a>
+          <br />
+          <div id="po28" class="abstract" style="display: none;">
+            <p>
+              As Large Language Models (LLMs) become integral to modern analytics, users increasingly rely on semantic
+              aggregates such as natural language summaries and comparative analyses. These aggregates, however,
+              implicitly assert claims that may not be verified.<br /><br />In this talk, we introduce Evergreen, a
+              system to efficiently verify LLM-generated claims against facts present in the input tuples used to
+              produce semantic aggregates. Evergreen decomposes natural language responses into atomic claims and
+              compiles them into verification queries composed of structured and semantic operators. Its execution
+              engine returns binary verification results together with provenance, indicating how each outcome depends
+              on facts present in the input tuples. We also present a suite of system-level optimizations—including
+              early termination, semantic sorting, operator fusion, sampling, and cross-claim caching—that substantially
+              reduce verification cost.<br /><br />Using a real-world restaurant reviews dataset, we demonstrate that
+              Evergreen can verify a wide range of claims at significantly lower cost than naïve end-to-end LLM
+              evaluation. These preliminary results suggest that claim-aware query planning and optimization make
+              verification practical at scale. We conclude by outlining future directions in table grounding, including
+              the integration of our techniques into emerging AI-SQL systems. By treating natural language claim
+              verification as a first-class query processing problem, Evergreen enables reliable and efficient
+              evaluation for next-generation AI-augmented data systems.
+          </div>
+        </td>
+      </tr>
+      </td>
+      </tr>
+
+
+
+
+      <tr>
+        <td>3:45 - 4:00</td>
+        <td>
+          <i>KramaBench: A Benchmark for AI Systems on Data-Intensive Tasks</i> <a
+            href="download/slides/talk_30.pdf">[Slides]</a> <a
+            href="download/posters/poster_30.pdf">[Poster]</a><br />
+          Gerardo Vitagliano (MIT CSAIL)*;
+          Eugenie Lai (MIT CSAIL);
+          Ziyu Zhang (MIT CSAIL);
+          Om Chabra (MIT CSAIL);
+          Michael Cafarella (MIT CSAIL);
+          Sam Madden (MIT CSAIL);
+          Tim Kraska (MIT CSAIL)
+          <br />
+          <a href="javascript: toggleVisibility ('#po30')">Click to Toggle Abstract</a>
+          <div id="po30" class="abstract" style="display: none;">
+            <p>
+              Real-world data science requires navigating complex pipelines across heterogeneous, unclean data—yet
+              current AI benchmarks focus primarily on isolated tasks like code generation or text-to-SQL. We present
+              KramaBench, a comprehensive benchmark evaluating end-to-end data science capabilities of LLM-based systems
+              through 104 manually curated challenges spanning 1,700 files across 6 domains (archaeology, astronomy,
+              biomedical research, environmental science, legal discovery, and wildfire analysis).<br />Our goal is to
+              provide fine-grained insights into where and why systems fail when solving data to insights tasks. To
+              ensure our benchmark reflects realistic pipelines, each of the benchmark tasks is grounded in real-world
+              datasets that have been the<br />subject of scientific studies and publicly available reports. <br />Our
+              evaluation includes 6 different agentic frameworks which we test with 8 different LLM backends. We include
+              both single agent baselines (with different degrees of data access) as well as state-of-the-art
+              multi-agent baselines. Overall, our results demonstrate that while multi-agent baselines are capable of
+              outperforming prompt-based and single agent baselines, current LLM systems remain far from solving
+              real-world data science problems, highlighting urgent research needs in data-<br />dependent reasoning,
+              robust domain knowledge integration, and holistic data lake understanding.
+          </div>
+        </td>
+      </tr>
+
+      </td>
+      </tr>
+
+
+
+
+      <tr>
+        <td>4:00 - 4:15</td>
+        <td>
+          <i>Optimizing Semantic Top-k Operators with Listwise Prompting</i> <a
+            href="download/slides/talk_32.pdf">[Slides]</a><br />
+          Jason Shin (University of Rochester);
+          Jiwon Chang (University of Rochester);
+          Fatemeh Nargesian (University of Rochester)*
+          <br />
+          <a href="javascript: toggleVisibility ('#po32')">Click to Toggle Abstract</a>
+          <div id="po32" class="abstract" style="display: none;">
+            <p>
+              A long-standing goal of data management systems has been to deliver quantitative insights on a large
+              scale. Today, the semantic capabilities
+              of large language models (LLMs) enable AI-driven analytics systems to reason over massive volumes of both
+              structured and unstructured
+              data. Supporting such AI-powered analytical queries requires systems that seamlessly combine query
+              processing with user-defined queries.
+              Achieving full-fledged analytics, with efficient, accurate, and general-purpose query support, would be a
+              transformative breakthrough.
+              <br />
+        </td>
+      </tr>
+      </td>
+
+      </tr>
+
+      <tr>
+        <td>4:15 - 4:30</td>
+        <td>
+          <i>Magneto: Combining Small and Large Language Models for Schema Matching</i> <a
+            href="download/slides/talk_38.pdf">[Slides]</a> <a
+            href="download/posters/poster_38.pdf">[Slides]</a><br />
+          Yurong Liu (New York University)*;
+          Eduardo Pena (Federal University of Technology Paraná);
+          Aécio Santos (New York University);
+          Eden Wu (New York University);
+          Juliana Freire (New York University)
+          <br />
+          <a href="javascript: toggleVisibility ('#po38')">Click to Toggle Abstract</a>
+          <div id="po38" class="abstract" style="display: none;">
+            <p>
+              Recent advances in language models opened new opportunities to address complex schema matching tasks.
+              Schema matching approaches have been proposed that demonstrate the usefulness of language models, but they
+              have also uncovered important limitations: Small language models (SLMs) require training data (which can
+              be both expensive and challenging to obtain), and large language models (LLMs) often incur high
+              computational costs and must deal with constraints imposed by context windows. We present Magneto, a
+              cost-effective and accurate solution for schema matching that combines the advantages of SLMs and LLMs to
+              address their limitations. By structuring the schema matching pipeline in two phases, retrieval and
+              reranking, Magneto can use computationally efficient SLM-based strategies to derive candidate matches
+              which can then be reranked by LLMs, thus making it possible to reduce runtime without compromising
+              matching accuracy. We propose a self-supervised approach to fine-tune SLMs which uses LLMs to generate
+              syntactically diverse training data, and prompting strategies that are effective for reranking. We also
+              introduce a new benchmark, developed in collaboration with domain experts, which includes real biomedical
+              datasets and presents new challenges to schema matching methods. Through a detailed experimental
+              evaluation, using both our new and existing benchmarks, we show that Magneto is scalable and attains high
+              accuracy for datasets from different domains.
+          </div>
+        </td>
+      </tr>
+      </td>
+      </tr>
+
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+      <tr class="success">
+        <td>4:30-5:00</td>
+        <td>
+          <i><strong>Coffee Break & Poster Preparation</strong> </i>
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+      </td>
+      </tr>
+
+      <tr>
+
+      <tr class="success">
+        <td>5:00-6:30</td>
+        <td>
+          <i><strong>Poster Session </strong> </i>
+
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+      <tr class="success">
+        <td>6:30-8:00</td>
+        <td>
+          <i><strong>Student Pizza Networking Session </strong> </i>
+
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+      <tr class="success">
+        <td colspan="2" align="center"><strong>End Of Official Program</strong></td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</div>
