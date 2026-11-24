@@ -9,7 +9,8 @@ ApplicationRouter = Backbone.Marionette.AppRouter.extend({
 		"transport": "transport",
 		"photos": "photos",
 		"history": "history",
-		"register": "register"
+		"register": "register",
+		"map": "map"
 	},
 
 	deselectPills: function () {
@@ -61,7 +62,20 @@ ApplicationRouter = Backbone.Marionette.AppRouter.extend({
 		MyApp.contentRegion.show(new ContentHistoryView());
 	},
 	
+    homeSection: function (pill, id) {
+        MyApp.contentRegion.show(new ContentHomeView());
+        this.selectPill(pill);
+        var el = document.getElementById(id);
+        if (el) { el.scrollIntoView(); }
+    },
+
     register: function () {
-        window.location.href = window.REGISTER_REDIRECT_LINK.registerRedirectUrl;
+        var url = window.REGISTER_REDIRECT_LINK.registerRedirectUrl;
+        if (url) { window.location.href = url; return; }
+        this.homeSection('ul.sidebar li.registration', 'registration');
+    },
+
+    map: function () {
+        this.homeSection('ul.sidebar li.map', 'eventdetails');
     }
 });
