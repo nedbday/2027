@@ -48,7 +48,13 @@
     <div class="row">
         <div class="col-sm-3 " id="nav" role="navigation"></div>
         <div class="col-sm-9">
-            <div id="content"></div>            
+            <div id="content"></div>
+            <!-- Static on purpose: Microsoft CMT verifies this text in the raw page source,
+                 so it must not be moved into a JS-rendered template or reformatted. -->
+            <div class="content-container" id="cmt-acknowledgment">
+                <h2>Acknowledgement</h2>
+                <p>The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.</p>
+            </div>
         </div>
     </div>
 </body>
